@@ -16,6 +16,23 @@ class Rsfetch < Formula
     bin.install "rsfetch"
   end
 
+  def caveats
+    <<~EOS
+      Get started:
+        rsfetch                    # Standard system info
+        rsfetch --boot             # Retro console-style boot animation
+        rsfetch --boot --center    # Centered boot animation
+
+      Add to your shell (~/.zshrc or ~/.bashrc):
+        rsfetch --boot
+
+      Configuration:
+        rsfetch --print-config > ~/.config/rsfetch/config.toml
+
+      Docs: https://github.com/gustafeden/rsfetch
+    EOS
+  end
+
   test do
     assert_match "rsfetch", shell_output("#{bin}/rsfetch --version")
   end
