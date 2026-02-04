@@ -1,15 +1,15 @@
 class Blaeckfetch < Formula
   desc "Fast system fetch display for your terminal"
   homepage "https://github.com/gustafeden/blaeckfetch"
-  version "0.3.0"
+  version "0.4.0"
   license "MIT"
 
   if Hardware::CPU.intel?
-    url "https://github.com/gustafeden/blaeckfetch/releases/download/v0.3.0/blaeckfetch-x86_64-apple-darwin.tar.gz"
-    sha256 "7d3e81cf92f1043171c232c13f1e6aa6dfcedfbd705cb182ab935f489166c038"
+    url "https://github.com/gustafeden/blaeckfetch/releases/download/v0.4.0/blaeckfetch-x86_64-apple-darwin.tar.gz"
+    sha256 "1269afc25ed9f0d1d26a9122c336e1f2f8249f204e5846eafe706833062c1e03"
   else
-    url "https://github.com/gustafeden/blaeckfetch/releases/download/v0.3.0/blaeckfetch-aarch64-apple-darwin.tar.gz"
-    sha256 "826191e6a393a4e44d6e7895d332c7588e7a7a359c4245fe9dc644383ba5928c"
+    url "https://github.com/gustafeden/blaeckfetch/releases/download/v0.4.0/blaeckfetch-aarch64-apple-darwin.tar.gz"
+    sha256 "e167c34985f7bcd57ec96ef3dc6441e4c1875ecc7bb15fb1e75740d2410a1cff"
   end
 
   def install
@@ -29,7 +29,7 @@ class Blaeckfetch < Formula
       Configuration:
         blaeckfetch --print-config > ~/.config/blaeckfetch/config.toml
 
-      Docs: https://github.com/gustafeden/blaeckfetch
+      Docs: https://gustafeden.github.io/blaeckfetch/
     EOS
   end
 
